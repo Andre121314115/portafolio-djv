@@ -1364,9 +1364,10 @@ img { display: block; max-width: 100%; }
   .container { padding: 0 20px; }
   .section { padding: 64px 0; }
   .hero__title { font-size: clamp(2rem, 10vw, 2.5rem); }
-  .hero__stats { padding: 14px 16px; gap: 12px; }
-  .hero__stat-n { font-size: 1.5rem; }
-  .hero__stat-l { display: none; }
+  .hero__stats { padding: 10px 12px; gap: 6px; }
+  .hero__stat-n { font-size: 1.3rem; }
+  .hero__stat-l { display: inline; font-size: .6rem; }
+  .hero__stat-sym { font-size: 0.85rem; }
   .hero__photo-outer { width: min(200px, 65vw); height: min(240px, 78vw); }
   .skills__grid { grid-template-columns: 1fr; }
   .section__head { margin-bottom: 36px; }
