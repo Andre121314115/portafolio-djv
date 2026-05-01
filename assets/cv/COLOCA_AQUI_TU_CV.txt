@@ -1,8 +1,0 @@
-📄 INSTRUCCIÓN:
-Coloca aquí el archivo del CV de Diojani con el nombre exacto:
-
-   cv.pdf
-
-Ruta final: assets/cv/cv.pdf
-
-El botón "Descargar CV" del portafolio descargará automáticamente este archivo.

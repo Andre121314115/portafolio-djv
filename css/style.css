@@ -612,6 +612,7 @@ img { display: block; max-width: 100%; }
   line-height: 1.85;
   color: var(--text-mid);
   margin-bottom: 18px;
+  text-align: justify;
 }
 .sobre__info {
   background: var(--bg-card);
@@ -1381,6 +1382,10 @@ img { display: block; max-width: 100%; }
   .theme-toggle { width: 48px; height: 24px; }
   .theme-toggle__ball { width: 16px; height: 16px; }
   [data-theme="dark"] .theme-toggle__ball { transform: translateX(24px); }
+  .sobre__info { padding: 18px 16px; }
+  .sobre__grid { grid-template-columns: 1fr; }
+  .info-item { grid-template-columns: 80px 1fr; gap: 8px; }
+  .info-item__val { word-break: break-word; overflow-wrap: anywhere; }
 }
 
 /* Pantalla muy pequeña: <= 360px */
