@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diojani Verástegui · Portafolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300;1,9..144,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ── NAV ── -->
+  <header class="nav" id="nav">
+    <a href="#hero" class="nav__logo">DJV</a>
+
+    <nav class="nav__links" id="navLinks">
+      <a href="#sobre">Sobre mí</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#certificados">Certificados</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="nav__actions">
+      <!-- DARK MODE TOGGLE -->
+      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+        <span class="theme-toggle__icon theme-toggle__icon--sun">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </span>
+        <span class="theme-toggle__icon theme-toggle__icon--moon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </span>
+        <div class="theme-toggle__ball"></div>
+      </button>
+
+      <a href="assets/cv/cv.pdf" download class="nav__cv-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Descargar CV
+      </a>
+
+      <button class="nav__ham" id="ham" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div class="mob-menu" id="mobMenu">
+    <div class="mob-menu__inner">
+      <a href="#sobre"        class="mob-menu__link">Sobre mí</a>
+      <a href="#experiencia"  class="mob-menu__link">Experiencia</a>
+      <a href="#habilidades"  class="mob-menu__link">Habilidades</a>
+      <a href="#certificados" class="mob-menu__link">Certificados</a>
+      <a href="#contacto"     class="mob-menu__link">Contacto</a>
+      <a href="assets/cv/cv.pdf" download class="mob-menu__cv">Descargar CV</a>
+    </div>
+  </div>
+
+  <!-- ════════════════════════
+       HERO
+  ════════════════════════ -->
+  <section class="hero" id="hero">
+
+    <!-- CANVAS PARTÍCULAS -->
+    <canvas class="hero__particles" id="particlesCanvas" aria-hidden="true"></canvas>
+
+    <!-- CURSOR TRAIL -->
+    <div class="trail-container" id="trailContainer" aria-hidden="true"></div>
+
+    <div class="hero__left">
+      <p class="hero__eyebrow reveal-hero" style="--hd:.2s">
+        <span class="dot-green"></span> Estudiante · Ing. Empresarial
+      </p>
+
+      <h1 class="hero__title reveal-hero" style="--hd:.35s">
+        Diojani<br>
+        <em>Jazmín</em><br>
+        Verástegui
+      </h1>
+
+      <!-- TYPEWRITER -->
+      <p class="hero__typewriter reveal-hero" style="--hd:.52s">
+        <span class="tw-text" id="twText"></span><span class="tw-cursor">|</span>
+      </p>
+
+      <div class="hero__actions reveal-hero" style="--hd:.68s">
+        <a href="#sobre" class="btn-primary">Conoce más</a>
+        <a href="assets/cv/cv.pdf" download class="btn-outline">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Descargar CV
+        </a>
+      </div>
+
+      <div class="hero__pills reveal-hero" style="--hd:.82s">
+        <span class="pill pill--lilac">Huancayo · Perú</span>
+        <span class="pill pill--green">Disponible</span>
+        <span class="pill pill--brown">2006</span>
+      </div>
+    </div>
+
+    <div class="hero__right reveal-hero" style="--hd:.4s">
+      <div class="hero__photo-outer">
+        <div class="hero__photo" id="heroPhoto">
+          <img src="assets/img/foto.jpg" alt="Diojani Verástegui" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">
+        </div>
+        <!-- Anillo morphing SVG -->
+        <svg class="hero__morph-ring" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path class="morph-path" d="M 100,20 C 140,20 180,60 180,100 C 180,140 140,180 100,180 C 60,180 20,140 20,100 C 20,60 60,20 100,20 Z"/>
+        </svg>
+        <div class="hero__deco-blob hero__deco-blob--1"></div>
+        <div class="hero__deco-blob hero__deco-blob--2"></div>
+        <div class="hero__deco-blob hero__deco-blob--3"></div>
+      </div>
+
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <span class="hero__stat-n" data-count="2">0</span>
+          <span class="hero__stat-sym">+</span>
+          <span class="hero__stat-l">años exp.</span>
+        </div>
+        <div class="hero__stat-sep"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-n" data-count="3">0</span>
+          <span class="hero__stat-sym"></span>
+          <span class="hero__stat-l">certificados</span>
+        </div>
+        <div class="hero__stat-sep"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-n" data-count="9">0</span>
+          <span class="hero__stat-sym"></span>
+          <span class="hero__stat-l">habilidades</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════
+       SOBRE MÍ
+  ════════════════════════ -->
+  <section class="section" id="sobre">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__label reveal">01 — Sobre mí</span>
+        <h2 class="section__title reveal">
+          Apasionada por<br>los <em>desafíos.</em>
+        </h2>
+      </div>
+
+      <div class="sobre__grid">
+        <div class="sobre__bio reveal">
+          <p>Me inspiran los desafíos que exigen creatividad, atención a los detalles y estrategia. Busco convertir cada experiencia en aprendizaje, aportando soluciones innovadoras y resultados concretos.</p>
+          <p>Disfruto trabajar con equipos diversos, transformando ideas en acciones con organización y entusiasmo, dejando un impacto positivo en cada proyecto.</p>
+        </div>
+
+        <div class="sobre__info reveal">
+          <div class="info-item">
+            <span class="info-item__key">Ubicación</span>
+            <span class="info-item__val">Av. San Carlos, Huancayo</span>
+          </div>
+          <div class="info-item">
+            <span class="info-item__key">Teléfono</span>
+            <span class="info-item__val">(+51) 922 884 484</span>
+          </div>
+          <div class="info-item">
+            <span class="info-item__key">Correo</span>
+            <span class="info-item__val">diojanijasminverasteguicordova@gmail.com</span>
+          </div>
+          <div class="info-item">
+            <span class="info-item__key">Instagram</span>
+            <span class="info-item__val">@diojanivercor</span>
+          </div>
+          <div class="info-item">
+            <span class="info-item__key">Idiomas</span>
+            <span class="info-item__val">
+              <span class="lang-tag">🇵🇪 Español — Nativo</span>
+              <span class="lang-tag">🇺🇸 Inglés — Básico</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════
+       EXPERIENCIA
+  ════════════════════════ -->
+  <section class="section section--alt" id="experiencia">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__label reveal">02 — Experiencia laboral</span>
+        <h2 class="section__title reveal">Trayectoria<br><em>profesional.</em></h2>
+      </div>
+
+      <div class="exp__list">
+        <article class="exp__card reveal">
+          <div class="exp__card-bar"></div>
+          <div class="exp__card-content">
+            <div class="exp__meta">
+              <span class="exp__num">01</span>
+              <span class="exp__period">2024 — 2025</span>
+            </div>
+            <div class="exp__main">
+              <h3 class="exp__role">Atención al cliente en museo</h3>
+              <p class="exp__place">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Huacón Milenario · Distrito de Mito
+              </p>
+              <p class="exp__desc">Brindé información sobre exposiciones, gestioné entradas y resolví consultas con trato cordial. Fortaleció mis habilidades en atención al cliente y comunicación efectiva.</p>
+              <div class="exp__tags">
+                <span>Atención al cliente</span>
+                <span>Comunicación</span>
+                <span>Gestión</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="exp__card reveal">
+          <div class="exp__card-bar"></div>
+          <div class="exp__card-content">
+            <div class="exp__meta">
+              <span class="exp__num">02</span>
+              <span class="exp__period">2023 — 2024</span>
+            </div>
+            <div class="exp__main">
+              <h3 class="exp__role">Ayudante de Artista Plástico</h3>
+              <p class="exp__place">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Distrito de Mito
+              </p>
+              <p class="exp__desc">Colaboré en preparación de materiales, organización de actividades y apoyo a estudiantes en proyectos artísticos. Fortaleció mi coordinación y atención al detalle.</p>
+              <div class="exp__tags">
+                <span>Coordinación</span>
+                <span>Arte</span>
+                <span>Enseñanza</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Educación -->
+      <div class="edu__wrap reveal">
+        <h3 class="edu__heading">Formación académica</h3>
+        <div class="edu__cards">
+          <div class="edu__card">
+            <div class="edu__card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <div>
+              <span class="edu__period">2023 — 2027</span>
+              <strong class="edu__name">Ingeniería Empresarial</strong>
+              <span class="edu__place">Universidad Continental</span>
+            </div>
+          </div>
+          <div class="edu__card">
+            <div class="edu__card-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <div>
+              <span class="edu__period">2018 — 2022</span>
+              <strong class="edu__name">Educación Secundaria</strong>
+              <span class="edu__place">Colegio San Juan Bosco</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════
+       HABILIDADES
+  ════════════════════════ -->
+  <section class="section" id="habilidades">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__label reveal">03 — Habilidades</span>
+        <h2 class="section__title reveal">Lo que me<br><em>define.</em></h2>
+      </div>
+
+      <div class="skills__grid">
+        <div class="skill reveal" style="--si:0">
+          <div class="skill__top">
+            <div class="skill__dot"></div>
+            <h3>Trabajo en equipo</h3>
+          </div>
+          <p>Colaboro con equipos diversos para alcanzar metas comunes.</p>
+          <div class="skill__bar-wrap"><div class="skill__bar" data-w="92"></div></div>
+        </div>
+        <div class="skill reveal" style="--si:1">
+          <div class="skill__top">
+            <div class="skill__dot"></div>
+            <h3>Comunicación efectiva</h3>
+          </div>
+          <p>Transmito ideas con claridad adaptándome a cada audiencia.</p>
+          <div class="skill__bar-wrap"><div class="skill__bar" data-w="88"></div></div>
+        </div>
+        <div class="skill reveal" style="--si:2">
+          <div class="skill__top">
+            <div class="skill__dot"></div>
+            <h3>Pensamiento crítico</h3>
+          </div>
+          <p>Analizo desde múltiples perspectivas para decidir con fundamento.</p>
+          <div class="skill__bar-wrap"><div class="skill__bar" data-w="85"></div></div>
+        </div>
+        <div class="skill reveal" style="--si:3">
+          <div class="skill__top">
+            <div class="skill__dot"></div>
+            <h3>Creatividad e innovación</h3>
+          </div>
+          <p>Propongo ideas originales que agregan valor a cada proyecto.</p>
+          <div class="skill__bar-wrap"><div class="skill__bar" data-w="95"></div></div>
+        </div>
+        <div class="skill reveal" style="--si:4">
+          <div class="skill__top">
+            <div class="skill__dot"></div>
+            <h3>Resolución de problemas</h3>
+          </div>
+          <p>Encuentro soluciones eficaces ante desafíos complejos.</p>
+          <div class="skill__bar-wrap"><div class="skill__bar" data-w="87"></div></div>
+        </div>
+        <div class="skill reveal" style="--si:5">
+          <div class="skill__top">
+            <div class="skill__dot"></div>
+            <h3>Atención al detalle</h3>
+          </div>
+          <p>Cuido cada elemento para garantizar calidad en los resultados.</p>
+          <div class="skill__bar-wrap"><div class="skill__bar" data-w="96"></div></div>
+        </div>
+        <div class="skill reveal" style="--si:6">
+          <div class="skill__top">
+            <div class="skill__dot"></div>
+            <h3>Gestión del tiempo</h3>
+          </div>
+          <p>Priorizo tareas y optimizo recursos para cumplir plazos.</p>
+          <div class="skill__bar-wrap"><div class="skill__bar" data-w="82"></div></div>
+        </div>
+        <div class="skill reveal" style="--si:7">
+          <div class="skill__top">
+            <div class="skill__dot"></div>
+            <h3>Adaptabilidad</h3>
+          </div>
+          <p>Me integro con agilidad a nuevos entornos y equipos.</p>
+          <div class="skill__bar-wrap"><div class="skill__bar" data-w="91"></div></div>
+        </div>
+        <div class="skill reveal" style="--si:8">
+          <div class="skill__top">
+            <div class="skill__dot"></div>
+            <h3>Orientación a resultados</h3>
+          </div>
+          <p>Enfoco mis esfuerzos en generar impacto concreto y medible.</p>
+          <div class="skill__bar-wrap"><div class="skill__bar" data-w="89"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════
+       CERTIFICADOS
+  ════════════════════════ -->
+  <section class="section section--alt" id="certificados">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__label reveal">04 — Formación complementaria</span>
+        <h2 class="section__title reveal">Certificados<br><em>&amp; cursos.</em></h2>
+        <p class="section__sub reveal">Clic en cada tarjeta para ver el certificado completo.</p>
+      </div>
+
+      <div class="cert__grid">
+        <div class="cert__card reveal">
+          <div class="cert__top">
+            <div class="cert__icon-wrap">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
+            <span class="cert__badge">ECBA®</span>
+          </div>
+          <p class="cert__org">IIBA Perú UC Chapter</p>
+          <h3 class="cert__title">Entry Certificate in Business Analysis</h3>
+          <div class="cert__bottom">
+            <span class="cert__date">Abr — Jul 2024</span>
+            <span class="cert__arrow">
+              Ver certificado
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </div>
+
+        <div class="cert__card reveal">
+          <div class="cert__top">
+            <div class="cert__icon-wrap">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <span class="cert__badge cert__badge--green">Python</span>
+          </div>
+          <p class="cert__org">Cisco Networking Academy · Python Institute</p>
+          <h3 class="cert__title">Python Essentials Básico</h3>
+          <div class="cert__bottom">
+            <span class="cert__date">Noviembre 2024</span>
+            <span class="cert__arrow">
+              Ver certificado
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </div>
+
+        <a href="assets/certificates/smart_engineering.pdf" target="_blank" class="cert__card reveal">
+          <div class="cert__top">
+            <div class="cert__icon-wrap">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <span class="cert__badge" style="background:var(--clr-accent-lilac,#c4b5fd22);color:#7c3aed;">Smart Eng.</span>
+          </div>
+          <p class="cert__org">Universidad Continental · Facultad de Ingeniería</p>
+          <h3 class="cert__title">VI Congreso Internacional de Ingeniería: Smart Engineering 2025</h3>
+          <div class="cert__bottom">
+            <span class="cert__date">Nov 2025</span>
+            <span class="cert__arrow">
+              Ver certificado
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════
+       CONTACTO
+  ════════════════════════ -->
+  <section class="section" id="contacto">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__label reveal">05 — Contacto</span>
+        <h2 class="section__title reveal">¿Trabajamos<br><em>juntos?</em></h2>
+      </div>
+
+      <div class="contact__layout">
+        <div class="contact__left reveal">
+          <p class="contact__desc">Estoy abierta a nuevas oportunidades, proyectos y colaboraciones. No dudes en escribirme.</p>
+          <div class="contact__links">
+            <a href="mailto:diojanijasminverasteguicordova@gmail.com" class="contact__link">
+              <div class="contact__link-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <span class="contact__link-label">Correo electrónico</span>
+                <span class="contact__link-val">diojanijasminverasteguicordova@gmail.com</span>
+              </div>
+            </a>
+            <a href="https://wa.me/51922884484" target="_blank" class="contact__link">
+              <div class="contact__link-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              </div>
+              <div>
+                <span class="contact__link-label">WhatsApp</span>
+                <span class="contact__link-val">(+51) 922 884 484</span>
+              </div>
+            </a>
+            <a href="https://instagram.com/diojanivercor" target="_blank" class="contact__link">
+              <div class="contact__link-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </div>
+              <div>
+                <span class="contact__link-label">Instagram</span>
+                <span class="contact__link-val">@diojanivercor</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact__cv reveal">
+          <div class="cv-card">
+            <div class="cv-card__glow"></div>
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <h3>Currículum Vitae</h3>
+            <p>Descarga el CV completo en PDF</p>
+            <a href="assets/cv/cv.pdf" download class="btn-primary btn-full">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Descargar CV
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__name">Diojani Jazmín Verástegui Córdova</p>
+      <p class="footer__copy">© 2026 · Todos los derechos reservados</p>
+      <div class="footer__socials">
+        <a href="https://instagram.com/diojanivercor" target="_blank" aria-label="Instagram">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/diojani-jasmin-verastegui-cordova-80405335b" target="_blank" aria-label="LinkedIn">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

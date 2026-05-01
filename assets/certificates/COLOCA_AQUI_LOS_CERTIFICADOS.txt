@@ -1,0 +1,11 @@
+📄 INSTRUCCIÓN:
+Coloca aquí los certificados en PDF con los nombres EXACTOS:
+
+   ecba.pdf       → Certificado ECBA (IIBA Perú UC Chapter)
+   python.pdf     → Certificado Python Essentials (Cisco / Python Institute)
+
+Rutas finales:
+   assets/certificates/ecba.pdf
+   assets/certificates/python.pdf
+
+Al hacer clic en cada tarjeta de certificado en el portafolio, se abrirá el PDF correspondiente.
