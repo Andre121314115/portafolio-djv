@@ -9,6 +9,29 @@ document.addEventListener('DOMContentLoaded', () => {
   const $$ = (s, c=document) => [...c.querySelectorAll(s)];
   const lerp = (a,b,t) => a+(b-a)*t;
 
+  /* ── SPLASH ── */
+  const splash   = document.getElementById('splash');
+  const splashBar = document.getElementById('splashBar');
+  const splashPct = document.getElementById('splashPct');
+  let pct = 0;
+  const splashInterval = setInterval(() => {
+    const step = pct < 70 ? 1.8 : pct < 90 ? 0.9 : 0.4;
+    pct = Math.min(pct + step, 100);
+    splashBar.style.width = pct + '%';
+    splashPct.textContent  = Math.floor(pct) + '%';
+    if (pct >= 100) {
+      clearInterval(splashInterval);
+      setTimeout(() => splash.classList.add('hidden'), 300);
+    }
+  }, 22);
+  window.addEventListener('load', () => {
+    pct = 100;
+    splashBar.style.width = '100%';
+    splashPct.textContent = '100%';
+    clearInterval(splashInterval);
+    setTimeout(() => splash.classList.add('hidden'), 400);
+  });
+
   /* ═══════════════ DARK MODE ═══════════════ */
   const html = document.documentElement;
   const themeToggle = $('#themeToggle');

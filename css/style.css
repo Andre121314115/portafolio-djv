@@ -1387,3 +1387,81 @@ img { display: block; max-width: 100%; }
   .hero__title { font-size: 1.9rem; }
   .nav__logo { font-size: 1.2rem; }
 }
+
+/* ════════════════════
+   SPLASH SCREEN
+════════════════════ */
+.splash {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  transition: opacity .6s ease, visibility .6s ease;
+}
+.splash.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.splash__bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 80% 20%, var(--lilac-pale) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 40% at 10% 80%, var(--brown-pale) 0%, transparent 70%);
+  opacity: .7;
+}
+.splash__content {
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+.splash__label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: .8rem;
+  font-weight: 500;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
+.splash__name {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(2.6rem, 8vw, 5rem);
+  font-weight: 300;
+  line-height: 1.05;
+  color: var(--text);
+  margin: 0;
+}
+.splash__name em {
+  font-style: italic;
+  color: var(--lilac);
+}
+.splash__bar-wrap {
+  width: min(320px, 70vw);
+  height: 2px;
+  background: var(--border);
+  border-radius: 99px;
+  overflow: hidden;
+  margin-top: .4rem;
+}
+.splash__bar {
+  height: 100%;
+  width: 0%;
+  background: var(--lilac);
+  border-radius: 99px;
+  transition: width .04s linear;
+}
+.splash__pct {
+  font-family: 'Fraunces', serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--text-soft);
+  letter-spacing: .05em;
+  min-width: 3ch;
+}
