@@ -96,6 +96,32 @@ body {
   cursor: none;
   -webkit-font-smoothing: antialiased;
   transition: background .35s ease, color .35s ease;
+  text-align: justify;
+}
+/* Justify all paragraph and descriptive text globally */
+p, li, .exp__desc, .sobre__bio p, .cert__title,
+.section__subtitle, .contact__intro {
+  text-align: justify;
+  hyphens: auto;
+}
+/* Keep centered/left elements untouched */
+h1, h2, h3, h4, h5, h6,
+.nav, .hero__eyebrow, .hero__title, .hero__actions,
+.hero__pills, .hero__stat, .section__label,
+.exp__num, .exp__period, .exp__role, .exp__place,
+.exp__tag, .cert__badge, .cert__date, .cert__arrow,
+.cert__org, .footer__copy, .footer__name,
+.skill__name, .skill__bar, .edu__degree, .edu__period,
+.contact__link-label, .contact__link-val,
+.info-item__key, .info-item__val, .splash__name,
+.splash__label, .splash__pct, .btn-primary, .btn-outline {
+  text-align: unset;
+}
+/* Container max-width for ultrawide/4K screens */
+.container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
 }
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
@@ -1471,4 +1497,25 @@ img { display: block; max-width: 100%; }
   color: var(--text-soft);
   letter-spacing: .05em;
   min-width: 3ch;
+}
+
+/* ════════════════════
+   PANTALLAS GRANDES
+════════════════════ */
+/* Large desktop: 1440px+ */
+@media (min-width: 1440px) {
+  html { font-size: 17px; }
+  .container { max-width: 1360px; }
+  .hero { padding: 160px 80px 100px; gap: 80px; }
+  .hero__title { font-size: clamp(4rem, 5vw, 5.5rem); }
+  .section { padding: 120px 0; }
+}
+
+/* 4K / ultrawide: 2560px+ */
+@media (min-width: 2560px) {
+  html { font-size: 20px; }
+  .container { max-width: 1800px; }
+  .hero__title { font-size: clamp(5rem, 4vw, 7rem); }
+  .section__title { font-size: clamp(3rem, 3vw, 4.5rem); }
+  .hero__photo-outer { width: 420px; height: 500px; }
 }
