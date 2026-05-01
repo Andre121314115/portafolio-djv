@@ -86,6 +86,7 @@
 html {
   scroll-behavior: smooth;
   font-size: clamp(14px, 1.1vw, 16px);
+  overflow-x: hidden;
 }
 body {
   font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
